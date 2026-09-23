@@ -20,8 +20,12 @@ class Solution(object):
                         k = k-1
                 elif nums[i]+nums[j]+nums[k]<0:
                     j = j+1
+                    while j<k and nums[j-1]==nums[j]:
+                        j = j+1
                 else:
                     k = k-1
+                    while j<k and k!=(n-1) and nums[k+1]==nums[k]:
+                        k = k-1
         return result
 
 
