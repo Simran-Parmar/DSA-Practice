@@ -7,7 +7,7 @@ class Solution(object):
             mid = (low+high)//2
             if nums[mid]==target:
                 return True
-            while low<high and nums[low]==nums[mid]==nums[high]:
+            while nums[low]==nums[mid]==nums[high] and low<high:
                 low = low + 1
                 high = high - 1
             if nums[mid]<=nums[high]:
